@@ -1,0 +1,65 @@
+# name
+experiment_name: 'new-epg-test-25-seg-images_256slices'
+datadir: '/home/ch215616/w/code/mwf/experiments/FULL-pipeline-hammers-to-mwf-prior-stats/single_image_example/libs/generated_examples/'
+
+# basics 
+n_examples: 100
+
+# priors 
+prior_means_path: '/home/ch215616/w/code/mwf/experiments/FULL-pipeline-hammers-to-mwf-prior-stats/single_image_example/libs/test_mean_v2_inc_tissue_n_parcel.pkl'
+prior_stds_path: '/home/ch215616/w/code/mwf/experiments/FULL-pipeline-hammers-to-mwf-prior-stats/single_image_example/libs/test_std_v2_inc_tissue_n_parcel.pkl'
+
+# segmentation templates 
+path_label_map: '/home/ch215616/w/code/mwf/experiments/generate-more-segmentations/joint_tissue_parcel_segmentations_in_t1_space_resamp_256slices/'
+
+# affine 
+apply_linear_trans: True
+rotation_bounds: 1.0e-17
+scaling_bounds: 1.0e-17
+shearing_bounds: 1.0e-17
+
+# non linear 
+apply_nonlin_trans: True
+nonlin_shape_factor: 0.0625
+nonlin_std: 3.0
+
+# flip 
+flipping: True
+
+# blur 
+blur_background: False
+blur_range: 1.2
+blurring: True
+
+# bias 
+apply_bias_field: False
+bias_field_std: 3.0e-09
+bias_shape_factor: 0.025
+
+# gmm sampling 
+sample_gmm: True
+vary_prior_means_and_stds: True
+prior_distribution: 'normal'
+mu_pop_var: 0.2
+vf_pop_var: 0.2
+std_to_mean_ratio: 0.2 # since real std is hard to gauge from real data, we set this to vary as a ratio of the mean value
+
+# misc (rarely changed) params
+output_shape: null
+gamma_augmentation: False
+min_max_norm: False
+clipping: False
+load_from_file: False
+save_prior_values: True
+
+# debug 
+check_priors: False
+debug_prior_values: False
+roi_name_ids: [44] # for debug prior values
+
+
+#unused
+#subject_count: 0
+
+
+

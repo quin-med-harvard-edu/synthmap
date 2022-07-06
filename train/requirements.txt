@@ -1,0 +1,12 @@
+pynrrd==0.4.2
+keras_tuner==1.0.1
+numpy==1.19.5
+psutil==5.7.3
+scipy==1.6.0
+nibabel==3.2.1
+tensorflow==2.2.0
+matplotlib==3.3.2
+Pygments==2.7.2
+Keras==2.3.1
+bunch==1.0.1
+ipython==7.20.0
